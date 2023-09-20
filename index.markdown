@@ -10,12 +10,14 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 
 ## Compared Systems
 
-- **SpkEmb-FastSVC**: FastSVC with speaker embedding extracted from ECAPA-TDNN, and linguistic features extracted from WenetSpeech.
-- **NeuCo-HiFi-GAN**: neural concatenative method using the Hifi-GAN framework with a neural source-filter module as the audio synthesizer.
-- **NeuCo-FastSVC**: neural concatenative method sharing the same audio synthesizer as SpkEmb-FastSVC.
-- **NeuCoSVC**: our proposed neural concatenative method utilizing the FastSVC architecture and the LTV module.
+- **SpkEmb-FastSVC**: speaker embedding with FastSVC as the audio synthesizer. The speaker embeddings are extracted from ECAPA-TDNN<sup>1</sup>, and the linguistic features are extracted from WenetSpeech<sup>2</sup>.
+- **NeuCo-HiFi-GAN**: neural concatenative method with nsf-HiFi-GAN<sup>3</sup> as the audio synthesizer.
+- **NeuCo-FastSVC**: neural concatenative method with FastSVC as the audio synthesizer.
+- **NeuCoSVC**: the proposed system, consisting of neural concatenative method with the FastSVC architecture and the LTV harmonic filter module.
 
 ## Audio Samples
+
+All speakers from the reference utterance remain unseen during training.
 
 <hr>
 
@@ -26,17 +28,17 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
   <tr>
     <th class="tg-0pky">Source</th>
     <th class="tg-0pky">Reference</th>
-    <th class="tg-0pky">SpkEmb FastSVC</th>
-    <th class="tg-0pky">NeuCo-HiFi-GAN</th>
+    <th class="tg-0pky">SpkEmb-FastSVC</th>
+    <th class="tg-0pky">NeuCoSVC (Proposed)</th>
     <th class="tg-0pky">NeuCo-FastSVC</th>
-    <th class="tg-0pky">NeuCoSVC(Proposed)</th>
+    <th class="tg-0pky">NeuCo-HiFi-GAN</th>
   </tr>
 </thead>
 <tbody>
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\M8_春风十里.wav" type="audio/mpeg">
+				<source src="audios\source_audio\M4_遇见.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -48,25 +50,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_OpenSinger\M8_春风十里_M26.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_OpenSinger\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_OpenSinger\M8_春风十里_M26.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_OpenSinger\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_OpenSinger\M8_春风十里_M26.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_OpenSinger\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger\M8_春风十里_M26.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_OpenSinger\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -86,25 +88,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -124,25 +126,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -150,7 +152,7 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\W23_Dance.wav" type="audio/mpeg">
+				<source src="audios\source_audio\W29_眼泪成诗.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -162,25 +164,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_OpenSinger\W23_Dance_W47.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_OpenSinger\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_OpenSinger\W23_Dance_W47.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_OpenSinger\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_OpenSinger\W23_Dance_W47.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_OpenSinger\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger\W23_Dance_W47.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_OpenSinger\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -195,10 +197,10 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
   <tr>
     <th class="tg-0pky">Source</th>
     <th class="tg-0pky">Reference</th>
-    <th class="tg-0pky">SpkEmb FastSVC</th>
-    <th class="tg-0pky">NeuCo-HiFi-GAN</th>
+    <th class="tg-0pky">SpkEmb-FastSVC</th>
+    <th class="tg-0pky">NeuCoSVC (Proposed)</th>
     <th class="tg-0pky">NeuCo-FastSVC</th>
-    <th class="tg-0pky">NeuCoSVC(Proposed)</th>
+    <th class="tg-0pky">NeuCo-HiFi-GAN</th>
   </tr>
 </thead>
 <tbody>
@@ -217,25 +219,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -243,7 +245,7 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\M18_空白格.wav" type="audio/mpeg">
+				<source src="audios\source_audio\M16_梵高先生.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -255,25 +257,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_NUS48E\M18_空白格_MPUR.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_NUS48E\M16_梵高先生_MPUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_NUS48E\M18_空白格_MPUR.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_NUS48E\M16_梵高先生_MPUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_NUS48E\M18_空白格_MPUR.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_NUS48E\M16_梵高先生_MPUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_NUS48E\M18_空白格_MPUR.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_NUS48E\M16_梵高先生_MPUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -281,7 +283,7 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\W6_香格里拉.wav" type="audio/mpeg">
+				<source src="audios\source_audio\W4_天黑黑.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -293,25 +295,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_NUS48E\W6_香格里拉_MCUR.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_NUS48E\W4_天黑黑_MCUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_NUS48E\W6_香格里拉_MCUR.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_NUS48E\W4_天黑黑_MCUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_NUS48E\W6_香格里拉_MCUR.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_NUS48E\W4_天黑黑_MCUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_NUS48E\W6_香格里拉_MCUR.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_NUS48E\W4_天黑黑_MCUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -331,25 +333,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -364,17 +366,17 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
   <tr>
     <th class="tg-0pky">Source</th>
     <th class="tg-0pky">Reference</th>
-    <th class="tg-0pky">SpkEmb FastSVC</th>
-    <th class="tg-0pky">NeuCo-HiFi-GAN</th>
+    <th class="tg-0pky">SpkEmb-FastSVC</th>
+    <th class="tg-0pky">NeuCoSVC (Proposed)</th>
     <th class="tg-0pky">NeuCo-FastSVC</th>
-    <th class="tg-0pky">NeuCoSVC(Proposed)</th>
+    <th class="tg-0pky">NeuCo-HiFi-GAN</th>
   </tr>
 </thead>
 <tbody>
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\M14_谁.wav" type="audio/mpeg">
+				<source src="audios\source_audio\M4_遇见.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -386,25 +388,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_Speech\M14_谁_emma.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_Speech\M4_遇见_emma.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_Speech\M14_谁_emma.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_Speech\M4_遇见_emma.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_Speech\M14_谁_emma.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_Speech\M4_遇见_emma.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_Speech\M14_谁_emma.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_Speech\M4_遇见_emma.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -412,7 +414,7 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\M22_当你老了.wav" type="audio/mpeg">
+				<source src="audios\source_audio\M16_梵高先生.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -424,25 +426,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_Speech\M22_当你老了_siyuanli.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_Speech\M16_梵高先生_siyuanli.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_Speech\M22_当你老了_siyuanli.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_Speech\M16_梵高先生_siyuanli.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_Speech\M22_当你老了_siyuanli.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_Speech\M16_梵高先生_siyuanli.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_Speech\M22_当你老了_siyuanli.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_Speech\M16_梵高先生_siyuanli.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -450,7 +452,7 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\W22_舞娘.wav" type="audio/mpeg">
+				<source src="audios\source_audio\W4_天黑黑.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -462,25 +464,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_Speech\W22_舞娘_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_Speech\W22_舞娘_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_Speech\W22_舞娘_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_Speech\W22_舞娘_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -488,7 +490,7 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\W40_易燃易爆炸.wav" type="audio/mpeg">
+				<source src="audios\source_audio\W29_眼泪成诗.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -500,25 +502,25 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\spkemb_fastsvc\To_Speech\W40_易燃易爆炸_tianxia.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_Speech\W29_眼泪成诗_tianxia.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm-HifiGAN\To_Speech\W40_易燃易爆炸_tianxia.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_Speech\W29_眼泪成诗_tianxia.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc\To_Speech\W40_易燃易爆炸_tianxia.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_Speech\W29_眼泪成诗_tianxia.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_Speech\W40_易燃易爆炸_tianxia.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HifiGAN\To_Speech\W29_眼泪成诗_tianxia.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -544,7 +546,7 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\M8_春风十里.wav" type="audio/mpeg">
+				<source src="audios\source_audio\M4_遇见.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -556,35 +558,31 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_5s\M8_春风十里_M26.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\5s\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_10s\M8_春风十里_M26.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\10s\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_30s\M8_春风十里_M26.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\30s\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_60s\M8_春风十里_M26.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\60s\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_90s\M8_春风十里_M26.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\90s\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -604,36 +602,31 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_5s\M16_梵高先生_W46.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\5s\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_10s\M16_梵高先生_W46.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\10s\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_30s\M16_梵高先生_W46.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\30s\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_60s\M16_梵高先生_W46.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\60s\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_90s\M16_梵高先生_W46.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\90s\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -653,31 +646,31 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_5s\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\5s\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_10s\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\10s\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_30s\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\30s\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_60s\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\60s\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_90s\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\90s\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -685,7 +678,7 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\W23_Dance.wav" type="audio/mpeg">
+				<source src="audios\source_audio\W29_眼泪成诗.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -697,36 +690,31 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_5s\W23_Dance_W47.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\5s\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_10s\W23_Dance_W47.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\10s\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_30s\W23_Dance_W47.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\30s\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_60s\W23_Dance_W47.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\60s\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\MOS_converted\wavlm_fastsvc_nhv\To_OpenSinger_90s\W23_Dance_W47.wav"
-					type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\90s\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
