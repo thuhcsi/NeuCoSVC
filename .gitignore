@@ -1,9 +1,2 @@
 _site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-audios
-audio_table.html
-duration_table.html
 *.py
