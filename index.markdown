@@ -10,8 +10,8 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 
 ## Compared Systems
 
-- **SpkEmb-FastSVC**: speaker embedding with FastSVC as the audio synthesizer. The speaker embeddings are extracted from ECAPA-TDNN<sup>1</sup>, and the linguistic features are extracted from WenetSpeech<sup>2</sup>.
-- **NeuCo-HiFi-GAN**: neural concatenative method with nsf-HiFi-GAN<sup>3</sup> as the audio synthesizer.
+- **SpkEmb-FastSVC**: speaker embedding with FastSVC as the audio synthesizer. The speaker embeddings are extracted from ECAPA-TDNN[<sup>1</sup>](#references), and the linguistic features are extracted from WenetSpeech[<sup>2</sup>](#references).
+- **NeuCo-HiFi-GAN**: neural concatenative method with nsf-HiFi-GAN[<sup>3,4</sup>](#references) as the audio synthesizer.
 - **NeuCo-FastSVC**: neural concatenative method with FastSVC as the audio synthesizer.
 - **NeuCoSVC**: the proposed system, consisting of neural concatenative method with the FastSVC architecture and the LTV harmonic filter module.
 
@@ -721,3 +721,13 @@ All speakers from the reference utterance remain unseen during training.
 	</tr>
 </tbody>
 </table>
+
+## REFERENCES
+
+[1] B. Desplanques, J. Thienpondt, and K. Demuynck, “ECAPA-TDNN: Emphasized Channel Attention, Propagation and Aggregation in TDNN Based Speaker Verification,” in Proc. Interspeech, 2020, pp. 3830–3834.
+
+[2] B. Zhang, H. Lv, P. Guo, Q. Shao, C. Yang, L. Xie, X. Xu, H. Bu, X. Chen, C. Zeng et al., “Wenetspeech: A 10000+ hours multi-domain mandarin corpus for speech recognition,” in ICASSP. IEEE, 2022, pp. 6182–6186.
+
+[3] X. Wang, S. Takaki, and J. Yamagishi, “Neural source-filter waveform models for statistical parametric speech synthesis,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 28, pp. 402–415, 2020.
+
+[4] J. Kong, J. Kim, and J. Bae, “Hifi-gan: Generative adversarial networks for efficient and high fidelity speech synthesis,” in Advances in Neural Information Processing Systems, vol. 33, 2020, pp. 17 022–17 033.
