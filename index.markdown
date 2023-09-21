@@ -11,9 +11,9 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 ## Compared Systems
 
 - **SpkEmb-FastSVC**: speaker embedding with FastSVC as the audio synthesizer. The speaker embeddings are extracted from ECAPA-TDNN[<sup>1</sup>](#references), and the linguistic features are extracted from WenetSpeech[<sup>2</sup>](#references).
-- **NeuCo-HiFi-GAN**: neural concatenative method with nsf-HiFi-GAN[<sup>3,4</sup>](#references) as the audio synthesizer.
+- **NeuCoSVC (Proposed)**: the proposed system, consisting of neural concatenative method with the FastSVC architecture and the LTV harmonic filter module.
 - **NeuCo-FastSVC**: neural concatenative method with FastSVC as the audio synthesizer.
-- **NeuCoSVC**: the proposed system, consisting of neural concatenative method with the FastSVC architecture and the LTV harmonic filter module.
+- **NeuCo-HiFi-GAN**: neural concatenative method with nsf-HiFi-GAN[<sup>3,4</sup>](#references) as the audio synthesizer.
 
 ## Audio Samples
 
@@ -372,7 +372,7 @@ All speakers from the reference utterance remain unseen during training.
     <th class="tg-0pky">NeuCo-HiFi-GAN</th>
   </tr>
 </thead>
-<tbody>
+<!--<tbody>
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
@@ -525,7 +525,7 @@ All speakers from the reference utterance remain unseen during training.
 			</audio>
 		</td>
 	</tr>
-</tbody>
+</tbody>-->
 </table>
 
 ### Duration Study
@@ -722,7 +722,7 @@ All speakers from the reference utterance remain unseen during training.
 </tbody>
 </table>
 
-## REFERENCES
+## References
 
 [1] B. Desplanques, J. Thienpondt, and K. Demuynck, “ECAPA-TDNN: Emphasized Channel Attention, Propagation and Aggregation in TDNN Based Speaker Verification,” in Proc. Interspeech, 2020, pp. 3830–3834.
 
