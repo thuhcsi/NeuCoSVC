@@ -68,7 +68,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_OpenSinger\M4_遇见_M26.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_OpenSinger\M4_遇见_M26.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -106,7 +106,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_OpenSinger\M16_梵高先生_W46.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -144,7 +144,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_OpenSinger\W4_天黑黑_M27.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -182,7 +182,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_OpenSinger\W29_眼泪成诗_W47.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_OpenSinger\W29_眼泪成诗_W47.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -237,7 +237,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_NUS48E\M4_遇见_JLEE.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -275,7 +275,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_NUS48E\M16_梵高先生_MPUR.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_NUS48E\M16_梵高先生_MPUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -313,7 +313,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_NUS48E\W4_天黑黑_MCUR.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_NUS48E\W4_天黑黑_MCUR.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -351,7 +351,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_NUS48E\W29_眼泪成诗_SAMF.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -406,7 +406,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_Speech\M4_遇见_emma.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_Speech\M4_遇见_emma.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -444,7 +444,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_Speech\M16_梵高先生_siyuanli.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_Speech\M16_梵高先生_siyuanli.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -482,7 +482,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -520,7 +520,7 @@ All speakers from the reference utterance remain unseen during training.
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HifiGAN\To_Speech\W29_眼泪成诗_tianxia.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_Speech\W29_眼泪成诗_tianxia.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
