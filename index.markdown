@@ -372,7 +372,7 @@ All speakers from the reference utterance remain unseen during training.
     <th class="tg-0pky">NeuCo-HiFi-GAN</th>
   </tr>
 </thead>
-<!--<tbody>
+<tbody>
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
@@ -452,37 +452,37 @@ All speakers from the reference utterance remain unseen during training.
 	<tr>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\source_audio\W4_天黑黑.wav" type="audio/mpeg">
+				<source src="audios\source_audio\W0_克卜勒.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\reference_audio\Speech\haowei.wav" type="audio/mpeg">
+				<source src="audios\reference_audio\Speech\honglunzhang.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\spkemb_fastsvc\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\spkemb_fastsvc\To_Speech\W0_克卜勒_honglunzhang.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_fastsvc_nhv\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc_nhv\To_Speech\W0_克卜勒_honglunzhang.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_fastsvc\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_fastsvc\To_Speech\W0_克卜勒_honglunzhang.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
 		<td class="tg-0pky">
 			<audio controls>
-				<source src="audios\converted\wavlm_HiFiGAN\To_Speech\W4_天黑黑_haowei.wav" type="audio/mpeg">
+				<source src="audios\converted\wavlm_HiFiGAN\To_Speech\W0_克卜勒_honglunzhang.wav" type="audio/mpeg">
 				Your browser does not support this audio format.
 			</audio>
 		</td>
@@ -525,7 +525,7 @@ All speakers from the reference utterance remain unseen during training.
 			</audio>
 		</td>
 	</tr>
-</tbody>-->
+</tbody>
 </table>
 
 ### Duration Study
