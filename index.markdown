@@ -6,7 +6,9 @@ Any-to-any singing voice conversion is confronted with a significant challenge o
 The SSL model condenses the audio into a sequence of fixed-dimensional SSL features. The harmonic signal generator produces both raw and filtered harmonic signals leveraging a linear time-varying filter given condition features. Simultaneously, the audio generator creates waveforms directly from the SSL features, integrating both the harmonic signals and the loudness. During inference, the audio generator constructs converted waveforms directly by substituting source SSL representations with their nearest counterparts from a matching pool, which comprises SSL representations extracted from the target audio.
 Consequently, this framework circumvents the challenge of disentanglement, effectively eliminating the issue of timbre leakage. Experimental results confirm that the proposed system delivers promising performance in the context of one-shot SVC across intra-language, cross-language, and cross-domain evaluations.
 
-![Overall Architecture](Architecture_1.png)
+<div style="text-align: center;">
+	<img src="/NeuCoSVC/Architecture_1.png" alt="Overall Architecture" style="max-width: 60%">
+</div>
 
 ## Compared Systems
 
