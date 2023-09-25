@@ -2,4 +2,4 @@
 
 Audio samples are available at https://thuhcsi.github.io/NeuCoSVC/
 
-We are releasing the code soon.
+The codes will be available upon acceptance.
