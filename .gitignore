@@ -1,3 +1,2 @@
-_site
-*.py
-*.html
+*__pycache__
+pretrained/*
