@@ -13,9 +13,9 @@ Figure: The structure of the proposed SVC system: (a) the SSL feature extracting
 
 ## Setup
 
-### Enviroment
+### Environment
 
-We recommend you to install Environment via Anaconda
+We recommend you install Environment via Anaconda
 
 ```bash
 conda create -n NeuCoSVC python=3.10.6
@@ -35,7 +35,7 @@ Then you need to put the WavLM-Large.pt file and model.pkl folder in the `pretra
 
 ## Inference
 
-Note that source waveform must be 24kHz. `--speech_enroll` is recommended when using speech as the reference audio, and the pitch of the reference audio will be increased to 1.2 times when performing pitch shift to cover the pitch gap between singing and speech.
+Note that the source waveform must be 24kHz. `--speech_enroll` is recommended when using speech as the reference audio, and the pitch of the reference audio will be increased to 1.2 times when performing a pitch shift to cover the pitch gap between singing and speech.
 
 ```bash
 python infer.py --src_wav_path src-wav-path --ref_wav_path ref-wav-path --out_path out-path --speech_enroll
@@ -99,6 +99,8 @@ We have incorporated publicly available code from the [kNN-VC](https://github.co
 We would like to express our gratitude to the authors of kNN-VC and WavLM for sharing their codebases. Their contributions have been instrumental in the development of our project.
 
 ## Citation
+
+If this repo is helpful with your research or projects, please kindly star our repo and cite our paper as follows:
 
 ```bibtex
 @misc{sha2023neural,
