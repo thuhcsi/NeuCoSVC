@@ -23,7 +23,7 @@ conda activate NeuCoSVC
 pip install -r requirements.txt
 ```
 
-Besides, [REAPER](https://www.reaper.fm/download.php) is required for pitch extraction. You need to download and install REAPER, and then modify the path to REAPER in [utils/pitch_ld_extraction.py](utils/pitch_ld_extraction.py)
+Besides, [REAPER](https://github.com/google/REAPER) is required for pitch extraction. You need to download and install REAPER, and then modify the path to REAPER in [utils/pitch_ld_extraction.py](utils/pitch_ld_extraction.py)
 
 ### Checkpoints
 
