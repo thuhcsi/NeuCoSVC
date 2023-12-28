@@ -15,13 +15,15 @@ Figure: The structure of the proposed SVC system: (a) the SSL feature extracting
 
 ### Environment
 
-We recommend you install Environment via Anaconda
+We recommend installing the project's environment using Anaconda. The `requirements.txt` file contains a curated list of dependencies for the developing environment(Torch 2.0.1 + cu117). You can use the following commands to set up the environment:
 
 ```bash
 conda create -n NeuCoSVC python=3.10.6
 conda activate NeuCoSVC
 pip install -r requirements.txt
 ```
+
+Additionally, you can find the complete original environment used for developing in the `requirements_all.txt` file.
 
 Besides, [REAPER](https://github.com/google/REAPER) is required for pitch extraction. You need to download and install REAPER, and then modify the path to REAPER in [utils/pitch_ld_extraction.py](utils/pitch_ld_extraction.py)
 
