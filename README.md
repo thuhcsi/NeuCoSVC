@@ -77,7 +77,7 @@ Then perform data preprocessing.
     python -m dataset.prematch_dataset --data_root dataset-root --out_dir dir-for-wavlm-feats
     ```
 
-3. Split the dataset into train, valid, and test sets, and generate the metadata files. By default, singing audio clips from the 26th and 27th male singers  (OpenSinger/ManRaw/26(7)_\*/\*.wav) and 46th and 47th female singers (OpenSinger/WomanRaw/46(7)_\*/\*.wav) are considered as the test set. The remaining singers' audio files are randomly divided into the train set and the valid set in a 9:1 ratio. Specify the directories for features using the `--wavlm_dir`, `--pitch_dir`, and `--ld_dir` parameters. If not specified, the corresponding features will be read from the `wavlm_features`, `pitch`, and `loudness` folders under the `data_root` directory.
+3. Split the dataset into train, valid, and test sets, and generate the metadata files. By default, singing audio clips from the 26th and 27th male singers(OpenSinger/ManRaw/26(7)\_\*/\*.wav) and 46th and 47th female singers(OpenSinger/WomanRaw/46(7)\_\*/\*.wav) are considered as the test set. The remaining singers' audio files are randomly divided into the train set and the valid set in a 9:1 ratio. Specify the directories for features using the `--wavlm_dir`, `--pitch_dir`, and `--ld_dir` parameters. If not specified, the corresponding features will be read from the `wavlm_features`, `pitch`, and `loudness` folders under the `data_root` directory.
 
     ```bash
     python dataset/metadata.py --data_root dataset-root 
@@ -91,6 +91,8 @@ python start.py --data_root dataset-dir --config configs/config.json --cp_path p
 # for distributed multi GPUs training:
 torchrun --nnodes=1 --nproc_per_node=4 start.py --data_root dataset-dir --config configs/config.json --cp_path pretrained
 ```
+
+To modify the training configurations or model parameters, you can edit the `configs/config.json` file. 
 
 ## Acknowledgements
 
