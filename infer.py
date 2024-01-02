@@ -72,7 +72,7 @@ def VoiceConverter(test_utt: str, ref_utt: str, out_path: str, svc_mdl: SVCNN, w
 
     # Save converted audio.
     print('Saving audio.')
-    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
     y_ = y_.unsqueeze(0)
     y_ = np.clip(y_.view(-1).cpu().numpy(), -1, 1)
     sf.write(out_path, y_, 24000)
