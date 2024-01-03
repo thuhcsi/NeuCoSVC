@@ -60,6 +60,8 @@ class WavLMEncoder(nn.Module):
         # load audio
         if type(path) in [str, Path]:
             x, sr = torchaudio.load(path, normalize=True)
+            if x.shape[0] > 1:
+                x = torch.mean(x, dim=0, keepdim=True)
             if sr != self.sr:
                 print(f'Original audio sr is {sr}, change it to {self.sr}.')
                 x = resampy.resample(x.numpy(), sr, self.sr, axis=1)
