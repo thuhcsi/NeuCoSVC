@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Any-to-any singing voice conversion is confronted with a significant challenge of "timbre leakage" issue caused by insufficient disentanglement between the content and the speaker timbre. To address the formidable challenge of disentanglement, this study introduces a novel neural concatenative singing voice conversion (NeuCoSVC) framework. The NeuCoSVC framework comprises a self-supervised learning (SSL) representation extractor, a neural harmonic signal generator, and a waveform synthesizer. 
+Any-to-any singing voice conversion (SVC) is confronted with a significant challenge of "timbre leakage" issue caused by insufficient disentanglement between the content and the speaker timbre. To address the formidable challenge of disentanglement, this study introduces a novel neural concatenative singing voice conversion (NeuCoSVC) framework. The NeuCoSVC framework comprises a self-supervised learning (SSL) representation extractor, a neural harmonic signal generator, and a waveform synthesizer. 
 The SSL model condenses the audio into a sequence of fixed-dimensional SSL features. The harmonic signal generator produces both raw and filtered harmonic signals leveraging a linear time-varying filter given condition features. Simultaneously, the audio generator creates waveforms directly from the SSL features, integrating both the harmonic signals and the loudness. During inference, the audio generator constructs converted waveforms directly by substituting source SSL representations with their nearest counterparts from a matching pool, which comprises SSL representations extracted from the target audio.
 Consequently, this framework circumvents the challenge of disentanglement, effectively eliminating the issue of timbre leakage. Experimental results confirm that the proposed system delivers promising performance in the context of one-shot SVC across intra-language, cross-language, and cross-domain evaluations.
 
@@ -19,7 +19,13 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 
 ## Audio Samples
 
+We conduct any-to-any SVC experiments in three different scenarios: **intra-language** and **cross-language** conversions for in-domain tests, and intra-language conversions for **cross-domain** evaluation. In the in-domain SVC, target speakers' singing voices are employed, whereas, in the cross-domain SVC, their speech voices serve as input. 
+
+Note that the reference audio in intra-/cross-language scenarios is approximately 10 minutes long, while the one in the cross-domain scenario is about 30 seconds long, as mentioned in Section 4 of our paper. In the demo web, we've only included a single segment of around 10 seconds of the target person's audio to demonstrate their voice characteristics.
+
 All speakers from the reference utterance remain unseen during training.
+
+Please feel free to explore the demo and refer to our paper for more detailed information on the experimental setup and results.
 
 <hr>
 
