@@ -60,9 +60,12 @@ def REAPER_F0(wav_path, sr=24000, frame_period=0.01):  # frame_period s
         cmd = f'convenient_place_for_repository/REAPER/build/reaper -i {wav_path} -f {wav_path}.f0 -e {frame_period} -x 1000 -m 65 -a'
         os.system(cmd)
     f0 = []
-    with open(f'{wav_path}.f0', 'r') as rf:
-        for line in rf.readlines()[7:]:
-            f0.append(float(line.split()[2]))
+    try:
+        with open(f'{wav_path}.f0', 'r') as rf:
+            for line in rf.readlines()[7:]:
+                f0.append(float(line.split()[2]))
+    except FileNotFoundError as e:
+        return None
 
     cmd = f'rm -f {wav_path}.f0'
     os.system(cmd)
@@ -159,7 +162,8 @@ def compute_pitch(wav_path: str, pitch_path: str=None, frame_period=0.01):
         compute_median.append(f0)
         # Compute pitch using REAPER algorithm
         f0 = REAPER_F0(wav_path, sr=fs, frame_period=frame_period)
-        compute_median.append(f0)
+        if f0 is not None:
+            compute_median.append(f0)
 
         # Compute median F0
         compute_median = pad_arrays(compute_median, f0_std_len)
