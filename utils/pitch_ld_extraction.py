@@ -57,7 +57,7 @@ def extract_loudness(wav_path: str | Path, ld_path: str | Path=None, frame_perio
 
 def REAPER_F0(wav_path, sr=24000, frame_period=0.01):  # frame_period s
     if not os.path.isfile(f'{wav_path}.f0'):
-        cmd = f'path/to/reaper/REAPER-master/build/reaper -i {wav_path} -f {wav_path}.f0 -e {frame_period} -x 1000 -m 65 -a'
+        cmd = f'convenient_place_for_repository/REAPER/build/reaper -i {wav_path} -f {wav_path}.f0 -e {frame_period} -x 1000 -m 65 -a'
         os.system(cmd)
     f0 = []
     with open(f'{wav_path}.f0', 'r') as rf:

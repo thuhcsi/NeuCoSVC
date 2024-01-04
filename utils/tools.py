@@ -44,9 +44,7 @@ def load_wav(wav_path, sr=None):
 
     """
     wav, fs = sf.read(wav_path)
-    if wav.ndim != 1:
-        print('The wav file %s has %d channels, select the first one to proceed.' %(wav_path, wav.ndim))
-        wav = wav[:,0]
+    assert wav.ndim == 1, 'Single-channel audio is required.'
     assert sr is None or fs == sr, f'{sr} kHz audio is required. Got {fs}'
     peak = np.abs(wav).max()
     if peak > 1.0:

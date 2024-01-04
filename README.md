@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 Additionally, you can find the complete original environment used for developing in the `requirements_all.txt` file.
 
-Besides, [REAPER](https://github.com/google/REAPER) is required for pitch extraction. You need to download and install REAPER, and then modify the path to REAPER in [utils/pitch_ld_extraction.py](utils/pitch_ld_extraction.py)
+Besides, [REAPER](https://github.com/google/REAPER) is required for pitch extraction. You need to download and build *reaper*, and then modify the path to *reaper* in the 60th line of [utils/pitch_ld_extraction.py](utils/pitch_ld_extraction.py)
 
 ### Checkpoints
 
