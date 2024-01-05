@@ -19,11 +19,9 @@ Consequently, this framework circumvents the challenge of disentanglement, effec
 
 ## Audio Samples
 
-We conduct any-to-any SVC experiments in three different scenarios: **intra-language** and **cross-language** conversions for in-domain tests, and intra-language conversions for **cross-domain** evaluation. In the in-domain SVC, target speakers' singing voices are employed, whereas, in the cross-domain SVC, their speech voices serve as input. 
+We conduct any-to-any SVC experiments in three different scenarios: **intra-language** and **cross-language** conversions for in-domain tests, and intra-language conversions for **cross-domain** evaluation. In the in-domain SVC, target speakers' singing voices are employed, whereas, in the cross-domain SVC, their speech voices serve as input. All speakers from the reference utterance remain unseen during training.
 
-Note that the reference audio in intra-/cross-language scenarios is approximately 10 minutes long, while the one in the cross-domain scenario is about 30 seconds long, as mentioned in Section 4 of our paper. In the demo web, we've only included a single segment of around 10 seconds of the target person's audio to demonstrate their voice characteristics.
-
-All speakers from the reference utterance remain unseen during training.
+Note that the reference audio in intra-/cross-language scenarios is approximately 10 minutes long, while the one in the cross-domain scenario is about 30 seconds long, as mentioned in Section 4 of our paper. In the demo web, we've only included a single segment of around 10 seconds of the target person's audio to demonstrate their voice characteristics. Additionally, singing audio of varying lengths are used in the **duration study** to assess the impact of reference audio duration on conversion quality.
 
 Please feel free to explore the demo and refer to our paper for more detailed information on the experimental setup and results.
 
