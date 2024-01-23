@@ -47,7 +47,7 @@ def load_wav(wav_path, sr=None):
     if sr != None and fs != sr:
         new_wav_path = "./temp_sr.wav"
         import os
-        os.system(f"ffmpeg -y -i {wav_path} -ar 24000 -ac 1 {new_wav_path}")
+        os.system(f"ffmpeg -y -i {wav_path} -ar {sr} -ac 1 {new_wav_path}")
         wav, fs = sf.read(new_wav_path)
     assert wav.ndim == 1, 'Single-channel audio is required.'
     assert sr is None or fs == sr, f'{sr} kHz audio is required. Got {fs}'
