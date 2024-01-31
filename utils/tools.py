@@ -2,6 +2,7 @@ import os
 import torch
 import numpy as np
 import soundfile as sf
+import librosa
 
 
 def fast_cosine_dist(source_feats: torch.Tensor, matching_pool: torch.Tensor, device='cpu'):
@@ -43,12 +44,7 @@ def load_wav(wav_path, sr=None):
         Tuple[np.ndarray, int]: Tuple containing the loaded waveform as a NumPy array and the sample rate.
 
     """
-    wav, fs = sf.read(wav_path)
-    if sr != None and fs != sr:
-        new_wav_path = "./temp_sr.wav"
-        import os
-        os.system(f"ffmpeg -y -i {wav_path} -ar {sr} -ac 1 {new_wav_path}")
-        wav, fs = sf.read(new_wav_path)
+    wav, fs = librosa.load(wav_path, sr=sr)
     assert wav.ndim == 1, 'Single-channel audio is required.'
     assert sr is None or fs == sr, f'{sr} kHz audio is required. Got {fs}'
     peak = np.abs(wav).max()
